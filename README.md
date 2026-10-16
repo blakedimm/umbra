@@ -11,6 +11,14 @@ Created and maintained by **[blakedimm](https://github.com/blakedimm)**.
 
 ---
 
+## Documentation
+
+- [Language Syntax Guide](docs/syntax-guide.md) — Complete specification of variables, syntax, and control flow.
+- [Standard Library Reference](docs/stdlib.md) — Built-in functions, signatures, and runtime behavior.
+- [Architecture & VM Internals](docs/architecture.md) — Deep dive into bytecode, Pratt parser, and VM design.
+
+---
+
 ## Architecture Overview
 
 Umbra follows the classic single-pass compilation and bytecode execution pipeline inspired by `clox` and CPython:
