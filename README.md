@@ -121,6 +121,32 @@ print "Sum of squares: " + str(total); // 220
 
 ---
 
+## Showcase Projects
+
+### [Aether — Procedural Dungeon Generator & World Simulator](projects/aether/)
+
+Located in [`projects/aether/aether.umb`](projects/aether/aether.umb), **Aether** is a complete procedural dungeon generator written in pure Umbra. It features a deterministic 32-bit LCG PRNG, 2D matrix generation, a 4-pass **Cellular Automata (Rule 4-5)** smoothing pipeline (`|>`), procedural entity placement (`@`, `>`, `$`, `M`), and execution profiling via `clock()`.
+
+```bash
+dotnet run -- projects/aether/aether.umb
+```
+
+```text
++----------------------------------------------------+
+|####################################################|
+|##@.#############..#######........###..#############|
+|##...###########.M.....................$############|
+|##....#########.........................####...#####|
+|###..$M.M.......####..................########$...##|
+|####..........$.####........$.........#######.....##|
+|##########.>########################################|
+|####################################################|
++----------------------------------------------------+
+Legend: [#] Wall  [.] Floor  [@] Player  [$] Loot  [M] Mob  [>] Portal
+```
+
+---
+
 ## Building and Running
 
 ### Prerequisites
