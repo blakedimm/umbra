@@ -1,0 +1,44 @@
+{
+  "name": "umbra-syntax",
+  "displayName": "Umbra Language Support",
+  "description": "Syntax highlighting and language configuration for the Umbra programming language (.umb)",
+  "version": "1.0.0",
+  "publisher": "blakedimm",
+  "author": {
+    "name": "blakedimm",
+    "url": "https://github.com/blakedimm"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blakedimm/umbra.git"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "umbra",
+        "aliases": [
+          "Umbra",
+          "umbra"
+        ],
+        "extensions": [
+          ".umb"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "umbra",
+        "scopeName": "source.umbra",
+        "path": "./syntaxes/umbra.tmLanguage.json"
+      }
+    ]
+  }
+}

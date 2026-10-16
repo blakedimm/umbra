@@ -1,0 +1,42 @@
+// Umbra Data Pipeline & Statistical Analyzer (analyzer.umb)
+// Author: blakedimm
+
+fn filterPositive(items) {
+    mut result = [];
+    for (x in items) {
+        if (x > 0) {
+            push(result, x);
+        }
+    }
+    return result;
+}
+
+fn mapSquares(items) {
+    mut result = [];
+    for (x in items) {
+        push(result, x * x);
+    }
+    return result;
+}
+
+fn sumList(items) {
+    mut total = 0;
+    for (x in items) {
+        total = total + x;
+    }
+    return total;
+}
+
+let startTime = clock();
+let dataset = [-5, 2, 0, 4, -1, 6, 8, -3, 10];
+
+let cleaned = dataset |> filterPositive;
+let squared = cleaned |> mapSquares;
+let total = squared |> sumList;
+
+print "Dataset:  " + str(dataset);
+print "Filtered: " + str(cleaned);
+print "Squared:  " + str(squared);
+print "Sum:      " + str(total);
+print "Count:    " + str(cleaned |> len);
+print "Elapsed:  " + str((clock() - startTime) * 1000) + " ms";

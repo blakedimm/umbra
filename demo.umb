@@ -1,0 +1,47 @@
+// 1. Работа со списками и индексацией
+mut scores = [10, 20, 30];
+scores[1] = 99;
+print scores; // Ожидается: [10, 99, 30]
+print scores[0] + scores[-1]; // 10 + 30 = 40
+
+// 2. Встроенные нативные функции и пайплайны
+print len(scores); // Ожидается: 3
+print scores |> len; // Ожидается: 3
+
+push(scores, 500);
+print scores |> len; // Ожидается: 4
+let last = pop(scores);
+print last; // Ожидается: 500
+
+// 3. Типы и приведение в строки
+print type(scores); // "list"
+print type("Umbra"); // "string"
+print type(123.45); // "number"
+print type(len); // "native"
+
+// 4. Цикл for .. in
+let fruits = ["Яблоко", "Груша", "Слива"];
+for (f in fruits) {
+    print "Фрукт: " + f;
+}
+
+// 5. Алгоритм: сортировка пузырьком (Bubble Sort) на чистой Umbra
+mut arr = [64, 34, 25, 12, 22, 11, 90];
+mut i = 0;
+let n = len(arr);
+
+while (i < n) {
+    mut j = 0;
+    while (j < n - i - 1) {
+        if (arr[j] > arr[j + 1]) {
+            let temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+        }
+        j = j + 1;
+    }
+    i = i + 1;
+}
+
+print "Отсортированный массив:";
+print arr;
